@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+  <div>@leocaesarr</div>
+  <div><img src="avatar.jpg" width="192" height="100"></div>
+
+    <button onclick="clicked()">Skill Data</button>
+    <div id="skillData" style="display: none">
+    </div>
+    <script>
+        const array1=["JavaScript","Angular","Java","Spring Boot"]
+        const skillData = document.querySelector("#skillData")
+        let ul=document.createElement("ul")
+        skillData.appendChild(ul);
+        for (let i = 0; i < array1.length; i++) {
+            let li=document.createElement("li")
+            li.textContent=array1[i]
+            skillData.appendChild(li)
+
+        }
+        const clicked = function () {
+            if (skillData.style.display === "none")
+                skillData.style.display = "block"
+            else{
+                skillData.style.display="none"
+            }
+        }
+
+    </script>
+</div>
+</body>
+</html>
